@@ -13,7 +13,7 @@
 #include<sstream>
 
 using namespace std;
-#define FAST_IO ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define FAST_IO ios_base::sync_with_stdio(false);cin.tie(NULL)
 #define open  freopen("input.txt","r",stdin)
 #define close  freopen ("output.txt","w",stdout)
 #define db double
@@ -45,6 +45,7 @@ using namespace std;
 #define pfl1(x) pf("%lld\n",x)
 #define pfl2(x,y) pf("%lld %lld\n",x,y)
 #define pfl3(x,y,z) pf("%lld %lld %lld\n",x,y,z)
+#define pfd(x,k) cout<<fixed<<setprecision(k)<<x;
 
 #define NL puts("")
 #define bug(x) cerr<<"Value of "<<#x<<" is "<<x<<endl
@@ -69,8 +70,12 @@ using namespace std;
 #define eps 1e-6
 #define ub upper_bound // return the right most index of x<val
 #define lb lower_bound // return the right most index of x<=val
-#define linf 3000000000000000000ll
+#define linf 2000000000000000000ll
 #define inf 2000000000
+#define onbit(mask,i) (mask | (1<<i) )
+#define offbit(mask,i) (mask ^ (1<<i) )
+#define checkbit(mask,i) (mask & (1<<i) )
+#define toogle(mask,i) (mask ^ (1<<i) )
 
 
 //BIGMOD 
@@ -102,10 +107,13 @@ template <class T> inline T bpow(T p,T e){
     }
     return (T)ret;
 }
+template <class T> inline T gethash(T h[],T power[],int l,int r){
+	if(r<l) return (T) 0;
+    return h[l]-h[r+1]*power[r-l+1];
+}
 
 //inline ll toint(string s){ll sum=0; for(int i=0;i<LEN(s);i++) sum=sum*10+(s[i]-'0'); return sum;}
-// inline string tostr(ll n){string str=""; while(n){str+=(n%10)+'0';n/=10;} reverse(all(str)); return str;}
-// inline lll HASH(lll oldhash,lll base,int sz,int bad,int jog){lll newhash=base*(oldhash-(bad*bpow(base,(lll)sz-1)))+jog; return newhash;}
+//inline string tostr(ll n){string str=""; while(n){str+=(n%10)+'0';n/=10;} reverse(all(str)); return str;}
 
 // BIT
 
@@ -155,16 +163,14 @@ int n,m,k;
 ll N,M,K;
 
 int main()
-{
-	
+{	
     int t,tc=1;
-	
-	    
-	return 0;
+    
+    
+    return 0;
 }
 
 /*
-
 
 
 */
