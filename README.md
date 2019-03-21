@@ -1,3 +1,3 @@
 # CPP_Codes
 
-This is my codes which I need in compettitve programming
+Algorithms and Data structures for Competitive Programming 
